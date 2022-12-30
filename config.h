@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
-static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
-static int borderpx = 2;
+static char *font = "Iosevka:pixelsize=14:antialias=true:autohint=true";
+static char *font2[] = { "Iosevka:pixelsize=14:antialias=true:autohint=true" };
+static int borderpx = 12;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -107,13 +107,13 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.6;
+float alpha = 0.7;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
-/* Terminal colors (16 first used in escape sequence) */
+/* Terminal colors (16 first used in escape sequence) (old) 
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f
 	"#cc241d",
 	"#98971a",
 	"#d79921",
@@ -130,24 +130,58 @@ static const char *colorname[] = {
 	"#8ec07c",
 	"#ebdbb2",
 	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
-	"#555555", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
-};
-
-
+	/* more colors can be added after 255 to use with DefaultXX 
+	"#add8e6", /* 256 -> cursor 
+	"#555555", /* 257 -> rev cursor
+	"#282828", /* 258 -> bg 
+	"#ebdbb2", /* 259 -> fg 
+}; */
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
+ * foreground, background, cursor, reverse cursor 
+ * (old)
 unsigned int defaultfg = 259;
 unsigned int defaultbg = 258;
 unsigned int defaultcs = 256;
 unsigned int defaultrcs = 257;
 unsigned int background = 258;
+*/
+const char *colorname[] = {
 
+  /* 8 normal colors */
+  "#301c30", /* black   */
+  "#B498AA", /* red     */
+  "#9B8ED7", /* green   */
+  "#AD8ECD", /* yellow  */
+  "#B7B3DC", /* blue    */
+  "#C795D3", /* magenta */
+  "#CABBD4", /* cyan    */
+  "#e6dce5", /* white   */
+
+  /* 8 light colors */
+   "#a19aa0",  /* black   */
+   "#B498AA",  /* red     */
+   "#9B8ED7", /* green   */
+   "#AD8ECD", /* yellow  */
+   "#B7B3DC", /* blue    */
+   "#C795D3", /* magenta */
+   "#CABBD4", /* cyan    */
+   "#e6dce5", /* white   */
+  [255] = 0 ,
+  /* special colors */
+  [256] = "#e6dce5",     /* cursor */
+  [257] = "#e6dce5",
+  [258] = "#301c30", /* background */
+  [259] = "#e6dce5", /* foreground */
+};
+
+/* Default colors (colorname index)
+ * foreground, background, cursor */
+ unsigned int defaultbg = 0;
+ unsigned int defaultfg = 257;
+ unsigned int defaultcs = 258;
+ unsigned int defaultrcs= 258;
+ unsigned int background = 258;
 /*
  * Default shape of cursor
  * 2: Block ("█")
