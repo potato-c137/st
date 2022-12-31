@@ -111,69 +111,7 @@ float alpha = 0.7;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
-/* Terminal colors (16 first used in escape sequence) (old) 
-static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX 
-	"#add8e6", /* 256 -> cursor 
-	"#555555", /* 257 -> rev cursor
-	"#282828", /* 258 -> bg 
-	"#ebdbb2", /* 259 -> fg 
-}; */
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor 
- * (old)
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
-unsigned int defaultcs = 256;
-unsigned int defaultrcs = 257;
-unsigned int background = 258;
-*/
-const char *colorname[] = {
-
-  /* 8 normal colors */
-  "#301c30", /* black   */
-  "#B498AA", /* red     */
-  "#9B8ED7", /* green   */
-  "#AD8ECD", /* yellow  */
-  "#B7B3DC", /* blue    */
-  "#C795D3", /* magenta */
-  "#CABBD4", /* cyan    */
-  "#e6dce5", /* white   */
-
-  /* 8 light colors */
-   "#a19aa0",  /* black   */
-   "#B498AA",  /* red     */
-   "#9B8ED7", /* green   */
-   "#AD8ECD", /* yellow  */
-   "#B7B3DC", /* blue    */
-   "#C795D3", /* magenta */
-   "#CABBD4", /* cyan    */
-   "#e6dce5", /* white   */
-  [255] = 0 ,
-  /* special colors */
-  [256] = "#e6dce5",     /* cursor */
-  [257] = "#e6dce5",
-  [258] = "#301c30", /* background */
-  [259] = "#e6dce5", /* foreground */
-};
+#include "colors.h"
 
 /* Default colors (colorname index)
  * foreground, background, cursor */
