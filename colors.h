@@ -20,11 +20,18 @@ const char *colorname[] = {
    "#71CBBD", /* cyan    */
    "#b5e9d7", /* white   */
     [255] = 0,
-  
+
     /* special colors */
-  [256] = "#272222", /* background */
-  [257] = "#b5e9d7", /* foreground */
-  [258] = "#b5e9d7",
-  [259] = "#b5e9d7",/* cursor */
+  [256] = "#b5e9d7", /* cursor */
+  [257] = "#b5e9d7", 
+  [258] = "#272222", /*background */
+  [259] = "#b5e9d7"  /* foreground */
 };
 
+/*
+   In special colors  these are the config change accordingly( for main terminal apperance )
+  [256] =cursor 
+  [257] =   
+  [258] =background 
+  [259] =foreground
+*/
