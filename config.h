@@ -111,7 +111,7 @@ float alpha = 0.7;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
-#include "colors.h"
+#include "colors.h" //configure your colors here
 
 /* Default colors (colorname index)
  * foreground, background, cursor */
@@ -527,4 +527,3 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-
