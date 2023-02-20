@@ -17,7 +17,7 @@ static int borderpx = 12;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -117,7 +117,7 @@ float alphaUnfocus;
  * foreground, background, cursor */
  unsigned int defaultbg = 0;
  unsigned int defaultfg = 257;
- unsigned int defaultcs = 258;
+ unsigned int defaultcs = 256;
  unsigned int defaultrcs= 258;
  unsigned int background = 258;
 /*
